@@ -23,6 +23,7 @@
 }
 
 .cost-item__price {
-   background-color:blanchedalmond;
+   background-color:rgb(180, 218, 233);
    padding: 10px 25px;
+   font-weight: bold;
 }
