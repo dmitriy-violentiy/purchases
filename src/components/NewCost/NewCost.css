@@ -1,0 +1,20 @@
+.new-cost {
+   background-color: rgb(180, 218, 233);
+   text-align: center;
+   margin-bottom: 20px;
+   padding: 20px;
+}
+
+.new-cost button {
+   cursor: pointer;
+   background-color: rgb(180, 218, 233);
+   width: 20%;
+   height: 35px;
+   transition: all ease 0.5s;
+   margin-top: 10px;
+}
+
+.new-cost button:hover,
+.new-cost button:active {
+   opacity: 0.5;
+}

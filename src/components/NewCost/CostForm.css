@@ -1,0 +1,24 @@
+.new-cost__controls {
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+   font-size: 18px;
+}
+
+.new-cost__control label {
+   font-weight: bold;
+   display: block;
+}
+
+.new-cost__control input {
+   border: 1px solid gray;
+   width: 20%;
+   height: 25px;
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+
+.new-cost__actions {
+   text-align: left;
+}
+
