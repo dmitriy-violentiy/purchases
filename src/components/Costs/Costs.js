@@ -1,6 +1,6 @@
 import CostItem from "./CostItem";
 
-function Costs(props) {
+const Costs = (props) => {
 	return (
 		<div className="costs">
 				<CostItem
