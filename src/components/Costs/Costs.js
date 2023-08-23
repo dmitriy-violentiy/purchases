@@ -1,8 +1,18 @@
 import CostItem from "./CostItem";
+import CostsFilter from "./CostsFilter";
+import React, { useState } from "react";
 
 const Costs = (props) => {
+	const [selectedYear, setSelectedYear] = useState("2020");
+
+	const yearChangeHandler = (year) => {
+		setSelectedYear(year);
+	};
+
 	return (
-		<div className="costs">
+		<div>
+			<CostsFilter year={selectedYear} onChangeYear={yearChangeHandler} />
+			<div className="costs">
 				<CostItem
 					date={props.costs[0].date}
 					description={props.costs[0].description}
@@ -19,7 +29,8 @@ const Costs = (props) => {
 					amount={props.costs[2].amount}
 				/>
 			</div>
+		</div>
 	);
-}
+};
 
 export default Costs;
