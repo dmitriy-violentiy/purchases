@@ -1,6 +1,7 @@
 import CostsFilter from "./CostsFilter";
 import React, { useState } from "react";
-import CostList from "./CostList"
+import CostList from "./CostList";
+import CostDiagram from "./CostsDiagram";
 
 const Costs = (props) => {
 	const [selectedYear, setSelectedYear] = useState("2020");
@@ -9,15 +10,15 @@ const Costs = (props) => {
 		setSelectedYear(year);
 	};
 
-	const filteredCoasts = props.costs.filter((cost) => {
+	const filteredCosts = props.costs.filter((cost) => {
 		return cost.date.getFullYear().toString() === selectedYear;
 	});
 
-	
 	return (
 		<div>
 			<CostsFilter year={selectedYear} onChangeYear={yearChangeHandler} />
-			<CostList costs={filteredCoasts}/>
+			<CostDiagram costs={filteredCosts} />
+			<CostList costs={filteredCosts} />
 		</div>
 	);
 };
